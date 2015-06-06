@@ -2,8 +2,8 @@
 #Modified by Mayeu <m@6x9.fr> - http://6x9.fr
 
 Veewee::Definition.declare({
-  :cpu_count => '1',
-  :memory_size=> '384',
+  :cpu_count => '2',
+  :memory_size=> '2048',
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
   :os_type_id => 'Debian_64',
   :iso_file => "debian-8.0.0-amd64-netinst.iso",
@@ -16,15 +16,15 @@ Veewee::Definition.declare({
      'preseed/url=http://%IP%:%PORT%/preseed.cfg ',
      'debian-installer=en_US ',
      'auto ',
-     'locale=en_US ',
-     'kbd-chooser/method=us ',
+     'locale=fr_CH ',
+     'kbd-chooser/method=ch(fr) ',
      'netcfg/get_hostname=%NAME% ',
      'netcfg/get_domain=vagrantup.com ',
      'fb=false ',
-     'debconf/frontend=noninteractive ',
+     'debconf/frontend=interactive ',
      'console-setup/ask_detect=false ',
-     'console-keymaps-at/keymap=us ',
-     'keyboard-configuration/xkb-keymap=us ',
+     'console-keymaps-at/keymap=qwertz ',
+     'keyboard-configuration/xkb-keymap=qwertz ',
      '<Enter>'
   ],
   :kickstart_port => "7122",
